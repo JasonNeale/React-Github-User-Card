@@ -1,6 +1,5 @@
 // Package imports
 import React from 'react'
-import axios from 'axios'
 import { Card, Icon, Header } from 'semantic-ui-react'
 
 // File imports
