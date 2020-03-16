@@ -19,22 +19,22 @@ function Followers({ followers }) {
                         <Card
                             key={item.id}
                             image={item.avatar_url}
-                            header={`Username: ${item.login}`}
-                            meta={`Type: ${item.type}`}
+                            header={item.name}
+                            meta={item.login}
                             description={(
                                 <span>
                                     <hr />
                                     <p>
                                         [<a target="_blank" rel="noopener noreferrer" href={item.html_url}>Profile</a>] -
-                                        [<a target="_blank" rel="noopener noreferrer" href={item.repos_url}>Repos</a>] -
-                                        [<a target="_blank" rel="noopener noreferrer" href={item.gists_url}>Gists</a>]
+                                        [<a target="_blank" rel="noopener noreferrer" href={`https://github.com/${item.login}?tab=repositories`}>Repos</a>] -
+                                        [<a target="_blank" rel="noopener noreferrer" href={`https://gist.github.com/${item.login}`}>Gists</a>]
                                     </p>
                                 </span>
                             )}
                             extra={(
                                 <span>
-                                    <Icon name="user" /> <a target="_blank" rel="noopener noreferrer" href="/followers">
-                                        {`View Followers (${item.length})`}
+                                    <Icon name="user" /> <a target="_blank" rel="noopener noreferrer" href={`https://github.com/${item.login}?tab=followers`}>
+                                        {`Followers`}
                                     </a>
                                 </span>
                             )}
