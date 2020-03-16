@@ -48,15 +48,15 @@ class Home extends React.Component {
                     <Card
                         key={this.state.ghUserData.id}
                         image={this.state.ghUserData.avatar_url}
-                        header={`Username: ${this.state.ghUserData.login}`}
-                        meta={`Type: ${this.state.ghUserData.type}`}
+                        header={this.state.ghUserData.name}
+                        meta={this.state.ghUserData.login}
                         description={(
                             <span>
                                 <hr />
                                 <p>
                                     [<a target="_blank" rel="noopener noreferrer" href={this.state.ghUserData.html_url}>Profile</a>] - 
-                                    [<a target="_blank" rel="noopener noreferrer" href={this.state.ghUserData.repos_url}>Repos</a>] -  
-                                    [<a target="_blank" rel="noopener noreferrer" href={this.state.ghUserData.gists_url}>Gists</a>]
+                                    [<a target="_blank" rel="noopener noreferrer" href={`https://github.com/${this.state.ghUserData.login}?tab=repositories`}>Repos</a>] -  
+                                    [<a target="_blank" rel="noopener noreferrer" href={`https://gist.github.com/${this.state.ghUserData.login}`}>Gists</a>]
                                 </p>
                             </span>
                         )}
